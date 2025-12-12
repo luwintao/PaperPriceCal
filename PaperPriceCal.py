@@ -173,7 +173,7 @@ class PaperPriceCalculator:
         # 公式显示
         formula_label = ttk.Label(
             calc2_frame, 
-            text="计算公式：相对价格 = (69 × 138) ÷ (高 × 长) × (张数 ÷ 价格) × 100", 
+            text="计算公式：相对价格 = (69 × 138) ÷ (高 × 长) × (价格 ÷ 张数) × 100", 
             style='Normal.TLabel'
         )
         formula_label.grid(row=2, column=0, sticky=tk.W, pady=(10, 0))
@@ -292,7 +292,7 @@ class PaperPriceCalculator:
                 self.entry_calc1_c.focus_set()
             
     def calculate_method2(self):
-        """计算方法2：(69*138)/(a*b)*(c/d)*100"""
+        """计算方法2：(69*138)/(a*b)*(d/c)*100"""
         try:
             # 获取输入值
             a_str = self.calc2_a.get().strip()
@@ -338,7 +338,7 @@ class PaperPriceCalculator:
                 return
                 
             # 计算结果
-            result = (69 * 138) / (a * b) * (c / d) * 100
+            result = (69 * 138) / (a * b) * (d / c) * 100
             self.calc2_result.set(f"结果：{result:.2f} 元/刀")
             
         except ValueError:
