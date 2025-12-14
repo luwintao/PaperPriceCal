@@ -72,9 +72,9 @@ class PaperPriceCalculator:
         ref_frame = ttk.LabelFrame(parent, text="参照信息", padding=10)
         ref_frame.grid(row=row, column=0, columnspan=3, sticky=(tk.W, tk.E), pady=(0, 20))
         
-        ref_text = """以4尺（69*138cm）100张价格作为参照：
-1. 桃记宣纸棉料四尺单宣（70CM*138CM 100张/刀）1050元
-2. 闲星阁一号玉扣纸（60CM*140CM 100张/刀）230元"""
+        ref_text = """以4尺（69*138cm）1刀100张价格作为参照：
+1. 桃记宣纸棉料四尺单宣（70CM*138CM 100张/刀）1050元，对应标准4尺1刀的相对价格为1035.00元
+2. 闲星阁一号玉扣纸（60CM*140CM 100张/刀）230元，对应标准4尺1刀的相对价格为260.72元"""
         
         ref_label = ttk.Label(ref_frame, text=ref_text, style='Normal.TLabel', justify=tk.LEFT)
         ref_label.grid(row=0, column=0, sticky=tk.W)
